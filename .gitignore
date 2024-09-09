@@ -1,0 +1,44 @@
+# Dependency directories
+node_modules/
+
+# Compiled output
+out/
+dist/
+
+# VS Code directories
+.vscode/
+.vscode-test/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Mac OS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# VS Code Extension specific
+*.vsix
+
+# Environment variables
+.env

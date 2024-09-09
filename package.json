@@ -1,0 +1,71 @@
+{
+    "name": "ollma-code-help",
+    "displayName": "OllmaCodeHelp",
+    "description": "AI-powered code explanation and improvement suggestions",
+    "version": "0.0.1",
+    "engines": {
+      "vscode": "^1.60.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [
+      "onCommand:ollmaCodeHelp.explainCode",
+      "onView:ollmaExplanation"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+      "commands": [
+        {
+          "command": "ollmaCodeHelp.explainCode",
+          "title": "Explain Code with Ollma"
+        }
+      ],
+      "menus": {
+        "editor/context": [
+          {
+            "when": "editorHasSelection",
+            "command": "ollmaCodeHelp.explainCode",
+            "group": "navigation"
+          }
+        ]
+      },
+      "viewsContainers": {
+        "activitybar": [
+          {
+            "id": "ollmaExplanationView",
+            "title": "Ollma Explanation",
+            "icon": "media/ollma-icon.svg"
+          }
+        ]
+      },
+      "views": {
+        "ollmaExplanationView": [
+          {
+            "type": "webview",
+            "id": "ollmaExplanation",
+            "name": "Ollma Explanation"
+          }
+        ]
+      }
+    },
+    "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src --ext ts",
+      "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+      "@types/vscode": "^1.60.0",
+      "@types/node": "14.x",
+      "@typescript-eslint/eslint-plugin": "^4.26.0",
+      "@typescript-eslint/parser": "^4.26.0",
+      "eslint": "^7.27.0",
+      "typescript": "^4.3.2"
+    },
+    "dependencies": {
+      "axios": "^0.21.1"
+    }
+  }
