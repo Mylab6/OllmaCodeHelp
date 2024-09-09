@@ -47,6 +47,21 @@
             "name": "Ollma Explanation"
           }
         ]
+      },
+      "configuration": {
+        "title": "OllmaCodeHelp",
+        "properties": {
+          "ollmaCodeHelp.apiEndpoint": {
+            "type": "string",
+            "default": "http://localhost:11434/api/generate",
+            "description": "The API endpoint for OllmaCodeHelp"
+          },
+          "ollmaCodeHelp.model": {
+            "type": "string",
+            "default": "deepseek-coder-v2",
+            "description": "The AI model to use for code explanation"
+          }
+        }
       }
     },
     "scripts": {
